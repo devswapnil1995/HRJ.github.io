@@ -48,11 +48,14 @@ export class AppComponent implements OnInit {
         items: 1
       }
     },
-    nav: true
+    nav: true,
+    lazyLoad: true,
+    lazyLoadEager:10
   };
 
   customOptions: OwlOptions = {
     loop: true,
+    lazyLoad: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
@@ -77,6 +80,7 @@ export class AppComponent implements OnInit {
       },
     },
     nav: true,
+    lazyLoadEager:10
   };
   constructor(private ser: AppServiceService, public dialog: MatDialog) { }
 
