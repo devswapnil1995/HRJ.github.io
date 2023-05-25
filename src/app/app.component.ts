@@ -9,7 +9,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'HowardJones-Renovations-LTD';
+  title = 'howardjones-renovations-ltd';
   color = 'primary';
   mode = 'indeterminate';
   value = 50;
