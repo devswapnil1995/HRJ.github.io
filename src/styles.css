@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("css/bootstrap.min.css");
+@import url("css/owl.carousel.min.css");
+@import url("css/magnific-popup.css");
+@import url("css/font-awesome.min.css");
+@import url("css/themify-icons.css");
+@import url("css/gijgo.css");
+@import url("css/nice-select.css");
+@import url("css/flaticon.css");
+@import url("css/slicknav.css");
+@import url("css/style.css");
+html, body { height: 100%; scroll-behavior: smooth;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container {
+    background-color: snow !important;
+    color: #3c3c96 !important;;
+    font-size: 18px !important;;
+  }
