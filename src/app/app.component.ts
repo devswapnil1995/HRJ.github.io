@@ -158,7 +158,7 @@ export class AppComponent implements OnInit {
         return;
       }
 
-      this.displayProgressSpinner = true;
+      //this.displayProgressSpinner = true;
 
       tempDetails += "Name:" + this.formData.name + "\n";
       tempDetails += "Company:" + this.formData.company + "\n";
@@ -166,26 +166,32 @@ export class AppComponent implements OnInit {
       tempDetails += "CountryCode:" + this.tempTel?.countryCode + "\n";
       tempDetails += "Message:" + this.formData.message + "\n";
       tempDetails += "Email:" + this.formData.email + "\n";
-
-      this.ser.sendMail(tempDetails).subscribe((res) => {
-        this.displayProgressSpinner = false;
-        this.dialog.open(DialogAnimationsExampleDialog, {
-          delayFocusTrap: true
-        });
-        setTimeout(() => {
-          this.dialog.closeAll();
-          this.formData = {
-            name: '',
-            company: '',
-            telephone: '',
-            email: '',
-            message: ''
-          };
-        }, 3000)
-      },
-      (error)=>{
-        this.displayProgressSpinner = false;
+      this.ser.sendEmail()
+      .then(() => {
+        console.log('Email sent successfully.');
       })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
+      // this.ser.sendMail(tempDetails).subscribe((res) => {
+      //   this.displayProgressSpinner = false;
+      //   this.dialog.open(DialogAnimationsExampleDialog, {
+      //     delayFocusTrap: true
+      //   });
+      //   setTimeout(() => {
+      //     this.dialog.closeAll();
+      //     this.formData = {
+      //       name: '',
+      //       company: '',
+      //       telephone: '',
+      //       email: '',
+      //       message: ''
+      //     };
+      //   }, 3000)
+      // },
+      // (error)=>{
+      //   this.displayProgressSpinner = false;
+      // })
     } catch (ex) {
       this.displayProgressSpinner = false;
     }
