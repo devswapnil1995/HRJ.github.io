@@ -21,7 +21,8 @@
         closedSymbol: '+',
         openedSymbol: '-'
       });
-    };
+    }
+    
     // blog-menu
     // $('ul#blog-menu').slicknav({
     //   prependTo: ".blog_menu"
@@ -167,12 +168,4 @@
   });
 
   // prise slider 
-
-
-
-
-
-
-
-
 })(jQuery);	

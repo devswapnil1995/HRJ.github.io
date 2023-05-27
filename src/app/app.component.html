@@ -1,11 +1,11 @@
-<header>
+<header id="homehtml">
     <div class="header-area">
         <div class="address_bar d-none d-lg-block">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-xl-3 col-lg-3">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="#homehtml">
                                 <img src="assets/img/logo.png" alt="">
                             </a>
                         </div>
@@ -50,7 +50,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">Home</a></li>
+                                        <li><a class="active" href="#homehtml">Home</a></li>
                                         <li><a href="#aboutUs">About</a></li>
                                         <li><a href="#ourServices">Services</a></li>
                                         <li><a href="#contactUs">Contact</a></li>
@@ -64,13 +64,14 @@
                         </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none">
-                                <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
-                                        class="slicknav_btn slicknav_collapsed" style="outline: none;"><span
+                                <!-- <div class="slicknav_menu">
+                                    <a href="#" aria-haspopup="true" role="button" tabindex="0" style="display: none !important;"
+                                        class="slicknav_btn slicknav_collapsed " style="outline: none;"><span
                                             class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span
                                                 class="slicknav_icon-bar"></span><span
                                                 class="slicknav_icon-bar"></span><span
                                                 class="slicknav_icon-bar"></span></span></a>
-                                    <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu"
+                                    <ul class="slicknav_nav slicknav_hidden" id="mobileMenuUlList" aria-hidden="true" role="menu"
                                         style="display: none;">
                                         <li><a class="active" href="#topContent" role="menuitem" tabindex="-1">Home</a>
                                         </li>
@@ -78,7 +79,7 @@
                                         <li><a href="#ourServices" role="menuitem" tabindex="-1">Services</a></li>
                                         <li><a href="#contactUs" role="menuitem" tabindex="-1">Contact</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -92,19 +93,19 @@
         <div class="owl-stage-outer">
             <div class="owl-stage">
                 <div class="crousel">
-                    <owl-carousel-o [options]="bannerOptions">                        
+                    <owl-carousel-o [options]="bannerOptions">
                         <ng-template carouselSlide>
                             <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
                                 <div class="">
                                     <div class="row align-items-center justify-content-center">
                                         <div class="col-xl-9 col-md-9 col-md-12">
                                             <div class="slider_text text-center">
-                                                <h3>Experienced Professional Contractors in Commercial and Industrial
+                                                <p>Experienced Professional Contractors in Commercial and Industrial
                                                     Painting
                                                     Renovation
                                                     Using the latest coating systems and specialist finishes
-                                                    to deliver the highest standards..</h3>
-                                                <a href="#ourServices" class="boxed-btn3">Our Services</a>
+                                                    to deliver the highest standards..</p>
+                                                    <a href="#aboutUs" class="boxed-btn3">About Us</a>
                                             </div>
                                         </div>
                                     </div>
@@ -117,12 +118,12 @@
                                     <div class="row align-items-center justify-content-center">
                                         <div class="col-xl-9 col-md-9 col-md-12">
                                             <div class="slider_text text-center">
-                                                <h3>Experienced Professional Contractors in Commercial and Industrial
+                                                <p>Experienced Professional Contractors in Commercial and Industrial
                                                     Painting
                                                     Renovation
                                                     Using the latest coating systems and specialist finishes
-                                                    to deliver the highest standards..</h3>
-                                                <a href="#ourServices" class="boxed-btn3">Our Services</a>
+                                                    to deliver the highest standards..</p>
+                                                    <a href="#aboutUs" class="boxed-btn3">About Us</a>
                                             </div>
                                         </div>
                                     </div>
@@ -135,12 +136,12 @@
                                     <div class="row align-items-center justify-content-center">
                                         <div class="col-xl-9 col-md-9 col-md-12">
                                             <div class="slider_text text-center">
-                                                <h3>Experienced Professional Contractors in Commercial and Industrial
+                                                <p>Experienced Professional Contractors in Commercial and Industrial
                                                     Painting
                                                     Renovation
                                                     Using the latest coating systems and specialist finishes
-                                                    to deliver the highest standards..</h3>
-                                                <a href="#ourServices" class="boxed-btn3">Our Services</a>
+                                                    to deliver the highest standards..</p>
+                                                    <a href="#aboutUs" class="boxed-btn3">About Us</a>
                                             </div>
                                         </div>
                                     </div>
@@ -165,8 +166,7 @@
                         <i class="flaticon-sketch"></i>
                     </div>
                     <h3>Creative Plan &amp; Design</h3>
-                    <p>There are many variations of passages of lorem Ipsum available, but the majority have
-                        suffered alteration.</p>
+                    <p>We always use best creative plan with proper design.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
@@ -175,8 +175,7 @@
                         <i class="flaticon-helmet"></i>
                     </div>
                     <h3>Talented Peoples</h3>
-                    <p>There are many variations of passages of lorem Ipsum available, but the majority have
-                        suffered alteration.</p>
+                    <p>We have best peoples with modern skills.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
@@ -185,8 +184,7 @@
                         <i class="flaticon-support"></i>
                     </div>
                     <h3>Modern Tools</h3>
-                    <p>There are many variations of passages of lorem Ipsum available, but the majority have
-                        suffered alteration.</p>
+                    <p>With modern design & skillful peoples we use modern tools.</p>
                 </div>
             </div>
         </div>
@@ -213,10 +211,11 @@
                         <p class="first_para"> “Construction is a full service construction company offering
                             building solutions from start to finish. Our staff has been operating on NYC for ten
                             years.</p>
-                        <p>There are many variations of passages of lorem Ipsum available, but the majority have
+                        <!-- <p>There are many variations of passages of lorem Ipsum available, but the majority have
                             suffered alteration in some form, by injected humour, or randomised words which don't
-                            look even slightly believable.</p>
-                        <a href="about.html" class="boxed-btn3">About Us</a>
+                            look even slightly believable.</p> -->
+                        
+                        <a href="#ourServices" class="boxed-btn3">Our Services</a>
                     </div>
                 </div>
             </div>
@@ -252,13 +251,13 @@
                                                 </div>
                                                 <div class="service_info">
                                                     <a href="#">
-                                                        <h3>Building Construction</h3>
+                                                        <h3>Advanced Industry Roofing Waterproofing Systems</h3>
                                                     </a>
-                                                    <p>There are many variations of passages of lorem Ipsum available.
-                                                    </p>
-                                                    <a class="d-flex align-items-center" href="#">More <i
+                                                    <!-- <p>Advanced Industry Roofing Waterproofing Systems  
+                                                    </p> -->
+                                                    <!-- <a class="d-flex align-items-center" href="#">More <i
                                                             class="ti-angle-right"></i>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -269,13 +268,13 @@
                                                 </div>
                                                 <div class="service_info">
                                                     <a href="#">
-                                                        <h3>Building Construction</h3>
+                                                        <h3>Industrial and Commercial Painting Renovations</h3>
                                                     </a>
-                                                    <p>There are many variations of passages of lorem Ipsum available.
-                                                    </p>
-                                                    <a class="d-flex align-items-center" href="#">More <i
+                                                    <!-- <p>There are many variations of passages of lorem Ipsum available.
+                                                    </p> -->
+                                                    <!-- <a class="d-flex align-items-center" href="#">More <i
                                                             class="ti-angle-right"></i>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -286,13 +285,13 @@
                                                 </div>
                                                 <div class="service_info">
                                                     <a href="#">
-                                                        <h3>Building Construction</h3>
+                                                        <h3>Metal Restoration and Coating Systems</h3>
                                                     </a>
-                                                    <p>There are many variations of passages of lorem Ipsum available.
-                                                    </p>
-                                                    <a class="d-flex align-items-center" href="#">More <i
+                                                    <!-- <p>There are many variations of passages of lorem Ipsum available.
+                                                    </p> -->
+                                                    <!-- <a class="d-flex align-items-center" href="#">More <i
                                                             class="ti-angle-right"></i>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -303,13 +302,13 @@
                                                 </div>
                                                 <div class="service_info">
                                                     <a href="#">
-                                                        <h3>Building Construction</h3>
+                                                        <h3>Industrial and commercial painting section</h3>
                                                     </a>
-                                                    <p>There are many variations of passages of lorem Ipsum available.
-                                                    </p>
-                                                    <a class="d-flex align-items-center" href="#">More <i
+                                                    <!-- <p>There are many variations of passages of lorem Ipsum available.
+                                                    </p> -->
+                                                    <!-- <a class="d-flex align-items-center" href="#">More <i
                                                             class="ti-angle-right"></i>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -320,13 +319,13 @@
                                                 </div>
                                                 <div class="service_info">
                                                     <a href="#">
-                                                        <h3>Building Construction</h3>
+                                                        <h3>Specialist Paint Finishes</h3>
                                                     </a>
-                                                    <p>There are many variations of passages of lorem Ipsum available.
-                                                    </p>
-                                                    <a class="d-flex align-items-center" href="#">More <i
+                                                    <!-- <p>There are many variations of passages of lorem Ipsum available.
+                                                    </p> -->
+                                                    <!-- <a class="d-flex align-items-center" href="#">More <i
                                                             class="ti-angle-right"></i>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -337,13 +336,14 @@
                                                 </div>
                                                 <div class="service_info">
                                                     <a href="#">
-                                                        <h3>Building Construction</h3>
+                                                        <h3>Wood Preservation,Restoration and Interior Decorating
+                                                            Solutions</h3>
                                                     </a>
-                                                    <p>There are many variations of passages of lorem Ipsum available.
-                                                    </p>
-                                                    <a class="d-flex align-items-center" href="#">More <i
+                                                    <!-- <p>There are many variations of passages of lorem Ipsum available.
+                                                    </p> -->
+                                                    <!-- <a class="d-flex align-items-center" href="#">More <i
                                                             class="ti-angle-right"></i>
-                                                    </a>
+                                                    </a> -->
                                                 </div>
                                             </div>
                                         </ng-template>
@@ -362,29 +362,8 @@
 </div>
 
 
-<div class="chose_us_area chose_bg_1">
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-lg-6 col-md-8">
-                <div class="chose_info">
-                    <h3>Why Choose Us?</h3>
-                    <p class="lasrge_text">
-                        “Construction is a full service construction company offering building solutions from start
-                        to finish. Our staff has been operating on NYC for ten years.
-                    </p>
-                    <p>There are many variations of passages of lorem Ipsum available, but the majority have
-                        suffered alteration in some form, by injected.</p>
-                    <div class="icon_video">
-                        <a class="popup-video" href="https://www.youtube.com/watch?v=Spi1vvZgLXw">
-                            <i class="fa fa-caret-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<!-- 
 <div class="testimonial_area ">
     <div class="container">
         <div class="row">
@@ -397,9 +376,6 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="testmonial_active owl-carousel owl-loaded owl-drag">
-
-
-
                     <div class="owl-stage-outer">
                         <div class="owl-stage"
                             style="transform: translate3d(-2280px, 0px, 0px); transition: all 0s ease 0s; width: 7980px;">
@@ -519,7 +495,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="contact_us overlay">
     <div class="container">
@@ -538,41 +514,60 @@
         </div>
     </div>
 </div>
->
-<section class="contact-section" id="contactUs">
+
+<section class="contact-section pt-0 mt-0" id="contactUs">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2 class="contact-title">Get in Touch</h2>
             </div>
             <div class="col-lg-8">
+                
                 <form (ngSubmit)="submitForm()" #contactForm="ngForm">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" required [(ngModel)]="formData.name"
-                            name="name">
+                        <label for="name">Name*</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="formData.name" name="name"
+                            maxlength="50">
+                        <label *ngIf="showNameValidation && formData?.name?.trim() == ''" style="color: red;font-weight: bold;">Please enter your
+                            name.</label>
                     </div>
                     <div class="form-group">
-                        <label for="name">Company</label>
-                        <input type="text" class="form-control" id="company" required [(ngModel)]="formData.company"
-                            name="company">
+                        <label for="name">Company*</label>
+                        <input type="text" class="form-control" id="company" [(ngModel)]="formData.company"
+                            name="company" maxlength="50">
+                        <label *ngIf="showCompanyValidation && formData?.company?.trim() == ''" style="color: red;font-weight: bold;">Please enter your
+                            company name.</label>
                     </div>
                     <div class="form-group">
-                        <label for="name">Telephone</label>
-                        <input type="text" class="form-control" id="telephone" required [(ngModel)]="formData.telephone"
-                            name="telephone" >
+                        <label for="name">Telephone*</label>
+                        <ngx-intl-tel-input [cssClass]="'form-control'" [enableAutoCountrySelect]="true"
+                            [enablePlaceholder]="true" [searchCountryFlag]="true"
+                            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                            [selectFirstCountry]="false" [maxLength]="15" [phoneValidation]="true"
+                            [separateDialCode]="true" name="phone" [(ngModel)]="tempTel">
+                        </ngx-intl-tel-input>
+                        <label *ngIf="showTelephoneValidation && (tempTel?.number?.toString()?.trim() == '' || this.tempTel?.number?.toString()?.trim() == undefined)" style="color: red;font-weight: bold;">Please enter your
+                            telephone number.</label>
+                        <label *ngIf="showCountryCodeValidation && this.tempTel?.countryCode?.toString()?.trim() == ''" style="color: red;font-weight: bold;">Please select country code.</label>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email*</label>
                         <input type="email" class="form-control" id="email" required [(ngModel)]="formData.email"
-                            name="email" [email]="true">
+                            name="email" [email]="true" maxlength="50">
+                        <label *ngIf="showEmailValidation && formData.email.trim() == ''" style="color: red;font-weight: bold;">Please enter your
+                            emailid.</label>
+                        <label *ngIf="showEmailValidValidation && (!this.formData.email.trim().includes('.') || !this.formData.email.trim().includes('@'))" style="color: red;font-weight: bold;">Please enter valid
+                            emailid.</label>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" required [(ngModel)]="formData.message"
-                            name="message"></textarea>
+                        <label for="message">Message*</label>
+                        <textarea class="form-control" id="message" [(ngModel)]="formData.message" name="message"
+                            maxlength="5000"></textarea>
+                        <label *ngIf="showMessageValidation && formData?.message?.toString()?.trim() == ''" style="color: red;font-weight: bold;">Please enter
+                            message.</label>
                     </div>
-                    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    
                 </form>
             </div>
             <div class="col-lg-3 offset-lg-1">
@@ -593,7 +588,7 @@
                     <div class="media-body">
                         <h3><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                 data-cfemail="53202623233c212713303c3f3c213f3a317d303c3e"></a>
-                                Kieranjsfm@gmail.com
+                            Kieranjsfm@gmail.com
                         </h3>
                     </div>
                 </div>
@@ -601,8 +596,29 @@
         </div>
     </div>
 </section>
-
-<footer class="footer">  
+<div class="chose_us_area chose_bg_1">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-6 col-md-8">
+                <div class="chose_info">
+                    <h3>Why Choose Us?</h3>
+                    <p class="lasrge_text">
+                        “Construction is a full service construction company offering building solutions from start
+                        to finish. Our staff has been operating on NYC for ten years.
+                    </p>
+                    <!-- <p>There are many variations of passages of lorem Ipsum available, but the majority have
+                        suffered alteration in some form, by injected.</p> -->
+                    <!-- <div class="icon_video">
+                        <a class="popup-video" href="https://www.youtube.com/watch?v=Spi1vvZgLXw">
+                            <i class="fa fa-caret-right"></i>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
     <div class="copy-right_text">
         <div class="container">
             <div class="footer_border"></div>
@@ -617,6 +633,6 @@
     </div>
 </footer>
 
-<app-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value" [backdropEnabled]="true" [positionGloballyCenter]="true"
- [displayProgressSpinner]="displayProgressSpinner">
+<app-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value" [backdropEnabled]="true"
+    [positionGloballyCenter]="true" [displayProgressSpinner]="displayProgressSpinner">
 </app-progress-spinner>

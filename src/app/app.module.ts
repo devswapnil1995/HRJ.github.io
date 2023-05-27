@@ -14,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProgressSpinnerModule } from 'src/app/progress-spinner/progress-spinner.module';
 import { AppOverlayModule } from 'src/app/overlay/overlay.module';
-
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 @NgModule({
   declarations: [
     AppComponent
@@ -27,10 +28,12 @@ import { AppOverlayModule } from 'src/app/overlay/overlay.module';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-     MatDialogModule, 
+    MatDialogModule,
     MatProgressSpinnerModule,
     AppOverlayModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    NgxIntlTelInputModule,
+    BsDropdownModule
   ],
   providers: [AppServiceService],
   bootstrap: [AppComponent]

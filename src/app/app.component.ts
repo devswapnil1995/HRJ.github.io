@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { AppServiceService } from './app.service.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import {
+  SearchCountryField,
+  CountryISO
+} from "ngx-intl-tel-input";
 
 @Component({
   selector: 'app-root',
@@ -22,14 +26,15 @@ export class AppComponent implements OnInit {
     email: '',
     message: ''
   };
+  ShowValidation: boolean = false;
 
   bannerOptions: OwlOptions = {
     autoplay: true,
     //autoplayTimeout:600,
     autoplayHoverPause: true,
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
     pullDrag: true,
     dots: false,
     navSpeed: 700,
@@ -48,16 +53,13 @@ export class AppComponent implements OnInit {
         items: 1
       }
     },
-    nav: true,
-    lazyLoad: true,
-    lazyLoadEager:10
+    nav: true
   };
 
   customOptions: OwlOptions = {
     loop: true,
-    lazyLoad: true,
-    mouseDrag: true,
-    touchDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
     pullDrag: false,
     dots: true,
     margin: 24,
@@ -80,8 +82,27 @@ export class AppComponent implements OnInit {
       },
     },
     nav: true,
-    lazyLoadEager:10
   };
+  tempTel = {
+    number: "",
+    internationalNumber: "",
+    nationalNumber: "",
+    countryCode: "GB",
+    dialCode: "+44"
+  };
+
+  SearchCountryField = SearchCountryField;
+  CountryISO = CountryISO;
+  preferredCountries: CountryISO[] = [CountryISO.Qatar];
+  showNameValidation: boolean = false;
+  showCompanyValidation: boolean = false;
+  showTelephoneValidation: boolean = false;
+  showEmailValidation: boolean = false;
+  showEmailValidValidation: boolean = false;
+  showMessageValidation: boolean = false;
+  showCountryCodeValidation: boolean = false;
+  isValid: boolean = false;
+
   constructor(private ser: AppServiceService, public dialog: MatDialog) { }
 
 
@@ -91,13 +112,61 @@ export class AppComponent implements OnInit {
 
   submitForm() {
     try {
-      this.displayProgressSpinner = true;
       let tempDetails: string = "";
+      this.showNameValidation = false;
+      this.showCompanyValidation = false;
+      this.showTelephoneValidation = false;
+      this.showEmailValidation = false;
+      this.showEmailValidValidation = false;
+      this.showMessageValidation = false;
+      this.showCountryCodeValidation= false;
+      this.isValid = true;
+
+      if (this.formData?.name?.trim() == "") {
+        this.showNameValidation = true;
+        this.isValid = false;
+      }
+      if (this.formData?.company?.trim() == "") {
+        this.showCompanyValidation = true;
+        this.isValid = false;
+      }
+
+      if (this.tempTel?.number?.toString()?.trim() == "" || this.tempTel?.number?.toString()?.trim() == undefined) {
+        this.showTelephoneValidation = true;
+        this.isValid = false;
+      }
+      
+      if (this.tempTel?.countryCode?.toString()?.trim() == "" || this.tempTel?.countryCode?.toString()?.trim() == undefined) {
+        this.showCountryCodeValidation = true;
+        this.isValid = false;
+      }
+
+      if (this.formData?.message?.toString()?.trim() == "") {
+        this.showMessageValidation = true;
+        this.isValid = false;
+      }
+      if (this.formData.email.trim() == "") {
+        this.showEmailValidation = true;
+        this.isValid = false;
+      }
+      else if (!this.formData.email.trim().includes(".") || !this.formData.email.trim().includes("@")) {
+        this.showEmailValidValidation = true;
+        this.isValid = false;
+      }
+
+      if (this.isValid == false) {
+        return;
+      }
+
+      this.displayProgressSpinner = true;
+
       tempDetails += "Name:" + this.formData.name + "\n";
       tempDetails += "Company:" + this.formData.company + "\n";
-      tempDetails += "Telephone:" + this.formData.telephone + "\n";
+      tempDetails += "Telephone:" + this.tempTel?.internationalNumber + "\n";
+      tempDetails += "CountryCode:" + this.tempTel?.countryCode + "\n";
       tempDetails += "Message:" + this.formData.message + "\n";
       tempDetails += "Email:" + this.formData.email + "\n";
+
       this.ser.sendMail(tempDetails).subscribe((res) => {
         this.displayProgressSpinner = false;
         this.dialog.open(DialogAnimationsExampleDialog, {
@@ -113,6 +182,9 @@ export class AppComponent implements OnInit {
             message: ''
           };
         }, 3000)
+      },
+      (error)=>{
+        this.displayProgressSpinner = false;
       })
     } catch (ex) {
       this.displayProgressSpinner = false;
@@ -127,6 +199,12 @@ export class AppComponent implements OnInit {
   Thank you, we have received your email.
 </div>`
 })
-export class DialogAnimationsExampleDialog {
-  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) { }
+export class DialogAnimationsExampleDialog implements OnInit {
+
+  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>,
+  ) { }
+
+  ngOnInit() {
+
+  }
 }
